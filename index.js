@@ -7,21 +7,11 @@ const crypto = require("crypto");
 const querystring = require("querystring");
 const csv = require('./util_files/csv-json.js')
 
-// fixed, client-side data
 // please note that server: third-party app, client: this app, user: end user
-// the credentials file only need client_id, client_secret, and apikey, the rest is fixed
 
-// const {
-//     client_id,     // Google Calendar API
-//     client_secret, // Google Calendar API
-//     scope,         // Google Calendar API
-//     apikey,        // AlphaVantage API
-//     timeZone       // Google Calendar API
-// } = require("./auth/credentials.json");
-
-const client_id = process.env.GOOGLE_CLIENT_ID;
-const client_secret = process.env.GOOGLE_CLIENT_SECRET;
-const apikey = process.env.ALPHA_VANTAGE_API_KEY;
+const client_id = process.env.GOOGLE_CLIENT_ID; // Enter your Google API client_id
+const client_secret = process.env.GOOGLE_CLIENT_SECRET; // Enter your Google API client_secret
+const apikey = process.env.ALPHA_VANTAGE_API_KEY; // Enter your AlphaVantage API key
 
 const timeZone = "America/New_York";
 const scope = "https://www.googleapis.com/auth/calendar https://www.googleapis.com/auth/calendar.events";
@@ -363,10 +353,10 @@ function generateCalendarEvent(reports, accessToken, calendarID, res) {
             });
             res.end(`<h2>400 Bad Request</h2>`);
         });
-        insertEventRequest.on("response", (eventStream) => processStream(eventStream, receivedEventResponse, res)).end(post_data);
+        insertEventRequest.on("response", () => receivedEventResponse(res)).end(post_data);
     }
 
-    function receivedEventResponse(body, res) {
+    function receivedEventResponse(res) {
         eventsAddedCount++;
         if (eventsAddedCount === reports.length) {
 
