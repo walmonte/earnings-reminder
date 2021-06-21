@@ -1,5 +1,6 @@
 const fs = require("fs");
 const url = require("url");
+require('dotenv').config();
 const http = require("http");
 const https = require("https");
 const crypto = require("crypto");
@@ -9,17 +10,24 @@ const csv = require('./util_files/csv-json.js')
 // fixed, client-side data
 // please note that server: third-party app, client: this app, user: end user
 // the credentials file only need client_id, client_secret, and apikey, the rest is fixed
-const {
-    client_id,     // Google Calendar API
-    client_secret, // Google Calendar API
-    scope,         // Google Calendar API
-    apikey,        // AlphaVantage API
-    timeZone       // Google Calendar API
-} = require("./auth/credentials.json");
+
+// const {
+//     client_id,     // Google Calendar API
+//     client_secret, // Google Calendar API
+//     scope,         // Google Calendar API
+//     apikey,        // AlphaVantage API
+//     timeZone       // Google Calendar API
+// } = require("./auth/credentials.json");
+
+const client_id = process.env.GOOGLE_CLIENT_ID;
+const client_secret = process.env.GOOGLE_CLIENT_SECRET;
+const apikey = process.env.ALPHA_VANTAGE_API_KEY;
+
+const timeZone = "America/New_York";
+const scope = "https://www.googleapis.com/auth/calendar https://www.googleapis.com/auth/calendar.events";
 let all_sessions = [];
 
 const port = 3000;
-
 const server = http.createServer();
 
 // every request to the server will be handled by the requestHandler callback
