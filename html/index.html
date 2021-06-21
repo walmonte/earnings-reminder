@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Earnings Calendar</title>
+    <style>
+        body,
+        form {
+            background-color: #f2f2f2;
+            font-family: monospace;
+            font-size: medium;
+            margin: 0 auto;
+            max-width: 800px;
+            overflow-x: hidden;
+        }
+
+        fieldset {
+            display: list-item;
+        }
+
+        input#tickers {
+            flex-grow: 100;
+            margin: 0 20px;
+        }
+
+        input#radioButton {
+            flex-grow: 10;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div style="margin: 5% auto;">
+        <div>
+            <a href="/">Home</a>>
+        </div>
+        <div style="margin: 5% auto;">
+            <div>
+                <h4>
+                    Welcome. This app can add earnings report reminders to your Google Calendar. Simply enter the stock
+                    symbols of your favorite publicly traded companies (separated by space or commas) in the text box
+                    and specify time
+                    horizon.<br><br>
+                    Notes:
+                </h4>
+                <ul>
+                    <li>Time horizon: choose 3 months for 1 report, 6 months for 2, and 12 months for 4.</li>
+                    <li>Please note that the API from which the data is gathered has a request limit of 5/min and
+                        500/day.</li>
+                </ul>
+
+
+            </div>
+            <div style="margin: 5% auto;">
+                <form action="search" method="get">
+                    <fieldset>
+                        <legend style="margin: 2% auto;">Please enter stock symbol and time horizon</legend>
+                        <label for="tickers">Stock Ticker(s):</label>
+                        <input id="tickers" name="tickers" type="text" /><br>
+                        <label>Time horizon:</label>
+                        <ul>
+                            <input type="radio" name="horizon" value="3" checked> 3 months<br>
+                            <input type="radio" name="horizon" value="6"> 6 months<br>
+                            <input type="radio" name="horizon" value="12"> 12 months<br>
+                        </ul>
+
+                        <input type="submit" value="Add to Calendar" />
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
