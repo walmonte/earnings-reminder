@@ -7,12 +7,12 @@ const crypto = require("crypto");
 const querystring = require("querystring");
 const csv = require('./util_files/csv-json.js')
 
-// please note that server: third-party app, client: this app, user: end user
+// please note that: server=third-party app, client=this app, user=end user
 
-const client_id = process.env.GOOGLE_CLIENT_ID; // Enter your Google API client_id
-const client_secret = process.env.GOOGLE_CLIENT_SECRET; // Enter your Google API client_secret
-const apikey = process.env.ALPHA_VANTAGE_API_KEY; // Enter your AlphaVantage API key
-
+// your credentials go here
+const client_id = process.env.GOOGLE_CLIENT_ID;
+const client_secret = process.env.GOOGLE_CLIENT_SECRET;
+const apikey = process.env.ALPHA_VANTAGE_API_KEY;
 const timeZone = "America/New_York";
 const scope = "https://www.googleapis.com/auth/calendar https://www.googleapis.com/auth/calendar.events";
 let all_sessions = [];
