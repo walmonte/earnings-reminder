@@ -1,11 +1,11 @@
 ## Earnings Report Scheduler
 
+![screenshot](/images/home-page-capture.JPG)
+
 - [What](#what)
 - [Why](#why)
 - [How](#how)
 - [Running the program](#running-the-program)
-
-![screenshot](/images/home-page-capture.JPG)
 
 ### What?
 
