@@ -5,7 +5,7 @@
 - [How](#how)
 - [Running the program](#running-the-program)
 
-[ScreenShot]<img src="\images\home-page-capture.JPG" style="zoom:75%;" />
+![](images/home-page-capture.JPG | zoom=75%)
 
 ### What?
 
