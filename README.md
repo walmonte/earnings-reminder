@@ -5,7 +5,7 @@
 - [How](#how)
 - [Running the program](#running-the-program)
 
-[](/images/home-page-capture.jpg)
+![](/images/home-page-capture.jpg)
 
 ### What?
 
