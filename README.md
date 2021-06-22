@@ -5,7 +5,7 @@
 - [How](#how)
 - [Running the program](#running-the-program)
 
-<img src="C:\Users\wac\Desktop\Education\Past Semesters\Spring21\CSCI355\CS355-FP-23587661\code\images\home-page-capture.JPG" style="zoom:75%;" />
+[ScreenShot]<img src="\images\home-page-capture.JPG" style="zoom:75%;" />
 
 ### What?
 
