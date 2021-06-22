@@ -1,7 +1,6 @@
 ## Earnings Report Scheduler
 
-* [What](#what)
-
+- [What](#what)
 - [Why](#why)
 - [How](#how)
 - [Running the program](#running-the-program)
