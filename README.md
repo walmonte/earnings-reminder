@@ -5,7 +5,7 @@
 - [What](#what)
 - [Why](#why)
 - [How](#how)
-- [Running the program](#running-the-program)
+- [Running the app](#running-the-program)
 
 ### What?
 
@@ -21,7 +21,7 @@ The app uses both synchronous and asynchronous JS to take the user from entering
 
 After taking user input, the app's server issues requests to the Alpha Vantage API (a public, financial data API) asking for data on a set of stock symbols entered by the user; for every symbol with a valid API response, response data is saved on an array in the JS program and (asynchronously) cached using text files for possible later use and prevention of redundant requests. Once all the data is retrieved, the user is redirected to Google's sign in page, prompted to provide their credentials, and, if login is successful, new events on the dates of earnings for the companies entered are added to the user's calendar; if login fails, the user is notified shortly before getting redirected to the home page of the app.
 
-### Running the program
+### Running the app
 
 1. Clone the repository
 
@@ -33,7 +33,7 @@ After taking user input, the app's server issues requests to the Alpha Vantage A
 
    - Google Calendar uses OAuth2 so you will need to go through a few more steps to obtain credentials. Please see [`Google's OAuth 2.0 documentation`](https://developers.google.com/identity/protocols/oauth2) for detailed instructions. You will only need a client_id and client_secret
 
-4. Start server by running `node index.js` on a terminal
+4. Start the server by running `node index.js` on a terminal
 
 5. Go to `http://localhost:3000/` using a browser of choice
 
