@@ -25,7 +25,7 @@ After taking user input, the app's server issues requests to the Alpha Vantage A
 
 1. Clone the repository
 
-2. Go to the app's folder, open a terminal, and install all dependencies listed on `package.json` by running `npm install` 
+2. Go to the app's folder, open a terminal, and install all dependencies by running `npm install` 
 
 3. Enter your credentials for Alpha Vantage API and Google Calendar API (change lines 13-15 on `index.js`)
 
@@ -33,7 +33,7 @@ After taking user input, the app's server issues requests to the Alpha Vantage A
 
    - Google Calendar uses OAuth2 so you will need to go through a few more steps to obtain credentials. Please see [`Google's OAuth 2.0 documentation`](https://developers.google.com/identity/protocols/oauth2) for detailed instructions. You will only need a client_id and client_secret
 
-4. Start the server by running `node index.js` on a terminal
+4. Start the server by running `node index.js`
 
 5. Go to `http://localhost:3000/` using a browser of choice
 
